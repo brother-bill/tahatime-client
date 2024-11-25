@@ -1,0 +1,20 @@
+FROM node:20.11.1-alpine
+
+WORKDIR /usr/src/app
+
+# Copy workspace configuration files
+COPY nx.json package*.json tsconfig*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy the entire workspace
+COPY . .
+
+# Set the working directory to the app todo not needed?
+# WORKDIR /usr/src/app/apps/tahatime
+
+# needed for some reason todo
+EXPOSE 4200
+
+CMD ["npx", "nx", "serve", "--host", "0.0.0.0"]

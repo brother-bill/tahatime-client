@@ -5,7 +5,9 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "format": "npx nx format:write && npm run format:html",
+    "format:html": "npx prettier --write \"apps/**/*.html\" --parser angular"
   },
   "private": true,
   "dependencies": {
@@ -17,6 +19,9 @@
     "@angular/platform-browser": "~18.2.0",
     "@angular/platform-browser-dynamic": "~18.2.0",
     "@angular/router": "~18.2.0",
+    "bootstrap-icons": "^1.11.3",
+    "ngx-plaid-link": "^14.0.0",
+    "primeng": "^17.18.12",
     "rxjs": "~7.8.0",
     "zone.js": "~0.14.3"
   },

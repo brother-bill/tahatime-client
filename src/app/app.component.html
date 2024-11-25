@@ -1,2 +1,7 @@
-<app-nx-welcome></app-nx-welcome>
+<!--<app-nx-welcome></app-nx-welcome>-->
+<app-day-night-toggle
+  (checked)="themeToggled()"
+  [isChecked$]="lightModeToggled$">
+</app-day-night-toggle>
+
 <router-outlet></router-outlet>
