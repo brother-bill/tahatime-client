@@ -1,12 +1,25 @@
 import { Inject, Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import {
+    BehaviorSubject,
+    distinctUntilChanged,
+    map,
+    Observable,
+    takeUntil,
+} from 'rxjs';
 import { DOCUMENT } from '@angular/common';
 
 export enum AppTheme {
-    LIGHT = 'lara-light',
-    DARK = 'lara-dark',
+    LIGHT = 'light',
+    DARK = 'dark',
 }
-
+// this.lightModeToggled$ = this.themeService.theme$.pipe(
+//     map(theme => theme === AppTheme.LIGHT),
+// );
+// this.themeService.theme$
+//     .pipe(takeUntil(this.destroy$), distinctUntilChanged())
+//     .subscribe(theme => {
+//         this.applyTheme(theme);
+//     });
 export const themeKey = 'user-theme';
 
 @Injectable({

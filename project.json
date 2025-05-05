@@ -25,18 +25,7 @@
         ],
         "styles": [
           "src/styles/styles.scss",
-          "node_modules/primeng/resources/primeng.min.css",
-          "node_modules/bootstrap-icons/font/bootstrap-icons.css",
-          {
-            "input": "src/styles/themes/lara-dark-blue.scss",
-            "bundleName": "lara-dark",
-            "inject": false
-          },
-          {
-            "input": "src/styles/themes/lara-light-blue.scss",
-            "bundleName": "lara-light",
-            "inject": false
-          }
+          "node_modules/bootstrap-icons/font/bootstrap-icons.css"
         ],
         "scripts": []
       },
